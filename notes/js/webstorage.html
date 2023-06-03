@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>浏览器本地存储 Web Storage | 乐维的学习文档</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/img/logo.png">
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.878647fa.css" as="style"><link rel="preload" href="/assets/js/app.3963a1c1.js" as="script"><link rel="preload" href="/assets/js/2.8d718c7b.js" as="script"><link rel="preload" href="/assets/js/27.85bf45a8.js" as="script"><link rel="prefetch" href="/assets/js/10.f6e8a606.js"><link rel="prefetch" href="/assets/js/11.e219e635.js"><link rel="prefetch" href="/assets/js/12.e676acef.js"><link rel="prefetch" href="/assets/js/13.c475688f.js"><link rel="prefetch" href="/assets/js/14.cebb1d79.js"><link rel="prefetch" href="/assets/js/15.42f9ed5e.js"><link rel="prefetch" href="/assets/js/16.553c08e9.js"><link rel="prefetch" href="/assets/js/17.e8c93489.js"><link rel="prefetch" href="/assets/js/18.07f404d6.js"><link rel="prefetch" href="/assets/js/19.5faf8595.js"><link rel="prefetch" href="/assets/js/20.60385b8c.js"><link rel="prefetch" href="/assets/js/21.7ccf3996.js"><link rel="prefetch" href="/assets/js/22.830c40aa.js"><link rel="prefetch" href="/assets/js/23.7b1728d9.js"><link rel="prefetch" href="/assets/js/24.0ffee632.js"><link rel="prefetch" href="/assets/js/25.c961c9ed.js"><link rel="prefetch" href="/assets/js/26.540167b8.js"><link rel="prefetch" href="/assets/js/28.82f6743f.js"><link rel="prefetch" href="/assets/js/29.53970cc4.js"><link rel="prefetch" href="/assets/js/3.4f02ec9c.js"><link rel="prefetch" href="/assets/js/30.b0b130d5.js"><link rel="prefetch" href="/assets/js/31.e2cb64d7.js"><link rel="prefetch" href="/assets/js/32.d098b1cc.js"><link rel="prefetch" href="/assets/js/33.91cb7a04.js"><link rel="prefetch" href="/assets/js/34.c149c53a.js"><link rel="prefetch" href="/assets/js/35.88924083.js"><link rel="prefetch" href="/assets/js/36.b44ba2e6.js"><link rel="prefetch" href="/assets/js/37.0a58b88e.js"><link rel="prefetch" href="/assets/js/38.3fc1207e.js"><link rel="prefetch" href="/assets/js/39.90c93060.js"><link rel="prefetch" href="/assets/js/4.4a87780f.js"><link rel="prefetch" href="/assets/js/40.22896465.js"><link rel="prefetch" href="/assets/js/41.1efc32b4.js"><link rel="prefetch" href="/assets/js/42.6ba54f4a.js"><link rel="prefetch" href="/assets/js/43.89d5c53b.js"><link rel="prefetch" href="/assets/js/5.60259a1b.js"><link rel="prefetch" href="/assets/js/6.0ac3fcf0.js"><link rel="prefetch" href="/assets/js/7.e1c74832.js"><link rel="prefetch" href="/assets/js/8.34bd848b.js"><link rel="prefetch" href="/assets/js/9.4faa1042.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.878647fa.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.png" alt="乐维的学习文档" class="logo"> <span class="site-name can-hide">乐维的学习文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/resources/website/websites_recom.html" class="nav-link">
+  Resources
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习" class="dropdown-title"><span class="title">前端学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习" class="mobile-dropdown-title"><span class="title">前端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes/h5c3/css.html" class="nav-link">
+  HTML&amp;CSS
+</a></li><li class="dropdown-subitem"><a href="/notes/js/what_is_js.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-subitem"><a href="/notes/less/less.html" class="nav-link">
+  Less
+</a></li></ul></li><li class="dropdown-item"><h4>
+          框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes/vue/vue核心基础.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/notes/react/react-basic.html" class="nav-link">
+  React
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其它
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes/git/git.html" class="nav-link">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/notes/nodejs/node.html" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-subitem"><a href="/notes/webpack/webpack基础.html" class="nav-link">
+  webpack
+</a></li><li class="dropdown-subitem"><a href="/notes/ide/vscode.html" class="nav-link">
+  vscode
+</a></li></ul></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/resources/website/websites_recom.html" class="nav-link">
+  Resources
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习" class="dropdown-title"><span class="title">前端学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习" class="mobile-dropdown-title"><span class="title">前端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes/h5c3/css.html" class="nav-link">
+  HTML&amp;CSS
+</a></li><li class="dropdown-subitem"><a href="/notes/js/what_is_js.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-subitem"><a href="/notes/less/less.html" class="nav-link">
+  Less
+</a></li></ul></li><li class="dropdown-item"><h4>
+          框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes/vue/vue核心基础.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/notes/react/react-basic.html" class="nav-link">
+  React
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其它
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes/git/git.html" class="nav-link">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/notes/nodejs/node.html" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-subitem"><a href="/notes/webpack/webpack基础.html" class="nav-link">
+  webpack
+</a></li><li class="dropdown-subitem"><a href="/notes/ide/vscode.html" class="nav-link">
+  vscode
+</a></li></ul></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/notes/js/what_is_js.html" class="sidebar-link">JavaScript 简介</a></li><li><a href="/notes/js/array.html" class="sidebar-link">Javascript 数组</a></li><li><a href="/notes/js/webstorage.html" aria-current="page" class="active sidebar-link">Web Storage 浏览器本地存储</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/notes/js/webstorage.html#基本使用" class="sidebar-link">基本使用</a></li><li class="sidebar-sub-header"><a href="/notes/js/webstorage.html#注意事项" class="sidebar-link">注意事项</a></li><li class="sidebar-sub-header"><a href="/notes/js/webstorage.html#sessionstorage-与-localstorage-对比" class="sidebar-link">sessionStorage 与 localStorage 对比</a></li></ul></li><li><a href="/notes/js/js_modules.html" class="sidebar-link">JS 模块化</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="浏览器本地存储-web-storage"><a href="#浏览器本地存储-web-storage" class="header-anchor">#</a> 浏览器本地存储 Web Storage</h1> <p>浏览器本地存储包括两个对象：<code>sessionStorage</code> 和 <code>localStorage</code>，它们都是 <code>Storage</code> 的实例对象。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code>window<span class="token punctuation">.</span>localStorage <span class="token keyword">instanceof</span> <span class="token class-name">Storage</span> <span class="token comment">// true</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="基本使用"><a href="#基本使用" class="header-anchor">#</a> 基本使用</h2> <p>访问数据：<code>getItem()</code></p> <p>添加、修改数据：<code>setItem()</code></p> <p>删除数据：<code>removeItem()</code></p> <p>清空数据：<code>clear()</code></p> <p>获取给定位置的键名：<code>key()</code></p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 以 localStorage 为例，sessionStorage 都一样</span>
+<span class="token comment">// 添加数据</span>
+localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token string">'name'</span><span class="token punctuation">,</span> <span class="token string">'BruceBlog'</span><span class="token punctuation">)</span>
+localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token string">'age'</span><span class="token punctuation">,</span> <span class="token number">2333</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 修改数据</span>
+localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token string">'age'</span><span class="token punctuation">,</span> <span class="token number">520</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 读取数据</span>
+localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">'age'</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 删除数据</span>
+localStorage<span class="token punctuation">.</span><span class="token function">removeItem</span><span class="token punctuation">(</span><span class="token string">'name'</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 清空数据</span>
+localStorage<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 遍历所有值，不知道是按什么顺序排列的</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> localStorage<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> key <span class="token operator">=</span> localStorage<span class="token punctuation">.</span><span class="token function">key</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+  <span class="token keyword">let</span> value <span class="token operator">=</span> localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">key: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>key<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">, value: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>value<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><h2 id="注意事项"><a href="#注意事项" class="header-anchor">#</a> 注意事项</h2> <p>只能够存储字符串，不是字符串的会调用 <code>toString()</code> 方法转成字符串。</p> <p>如果想要存储对象，需要使用 <code>JSON.stringify()</code> 转成 JSON 字符串再存储，以后再用 <code>JSON.parse()</code> 还原成对象。</p> <p>如果无法转成字符串，则会报错。比如 <code>Symbol</code> 类型的变量无法转成字符串。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">book</span><span class="token operator">:</span> <span class="token string">'HTTP'</span><span class="token punctuation">,</span> <span class="token literal-property property">price</span><span class="token operator">:</span> <span class="token number">46</span> <span class="token punctuation">}</span>
+<span class="token keyword">let</span> obj2 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> <span class="token string">'object'</span><span class="token punctuation">)</span> <span class="token comment">// '[object Object]': 'object'</span>
+localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token string">'func'</span><span class="token punctuation">,</span> fn<span class="token punctuation">)</span> <span class="token comment">// 'func': 'function fn() {}'</span>
+
+localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token string">'info'</span><span class="token punctuation">,</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// 'info': '{\&quot;book\&quot;:\&quot;HTTP\&quot;,\&quot;price\&quot;:46}'</span>
+
+localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span>obj2<span class="token punctuation">)</span> <span class="token comment">// 'object'，obj2 会被转成 '[object Object]'</span>
+
+localStorage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span><span class="token string">'symbol'</span><span class="token punctuation">,</span> <span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token number">666</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// Uncaught TypeError: Cannot convert a Symbol value to a string</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h2 id="sessionstorage-与-localstorage-对比"><a href="#sessionstorage-与-localstorage-对比" class="header-anchor">#</a> <code>sessionStorage</code> 与 <code>localStorage</code> 对比</h2> <p><code>sessionStorage</code> 是跨会话存储机制，<code>localStorage</code> 是永久存储机制。</p> <p>作用时间：<code>sessionStorage</code> 在窗口关闭后就会失效，<code>localStorage</code> 是永久存储，除非手动通过 JS 删除或清除浏览器缓存。</p> <p>作用范围：<code>sessionStorage</code> 的数据只能在<strong>同源</strong>（协议域名端口号相同）、<strong>同一个窗口</strong>共享，<code>localStorage</code> 的数据在<strong>同源、不同窗口共享（同一个浏览器）</strong>。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/notes/js/array.html" class="prev">
+        Javascript 数组
+      </a></span> <span class="next"><a href="/notes/js/js_modules.html">
+        JS 模块化
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.3963a1c1.js" defer></script><script src="/assets/js/2.8d718c7b.js" defer></script><script src="/assets/js/27.85bf45a8.js" defer></script>
+  </body>
+</html>
